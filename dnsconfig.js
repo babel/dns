@@ -31,6 +31,7 @@ D("babeljs.io", REG_NONE, DnsProvider(DNS_CLOUDFLARE),
   MX("@", 10, "mxa.mailgun.org."),
   MX("@", 10, "mxb.mailgun.org."),
   TXT("@", "v=spf1 include:mailgun.org ~all"),
+  TXT("_dmarc", "v=DMARC1; p=reject; pct=100; fo=1; ri=3600; rua=mailto:ccb90f52@dmarc.mailgun.org,mailto:745e4f4c@inbox.ondmarc.com; ruf=mailto:ccb90f52@dmarc.mailgun.org,mailto:745e4f4c@inbox.ondmarc.com;"),
   TXT("pic._domainkey", "k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzOdtkSzaHBIBklk/c49YKjxYlyWJYftaV+qvgJcndKgg88XlTi1HaZVkb+2L1J1GzCZy3aNHv5OxXquRUB4NqSD6g9D9rO9ytvogwFavic/UoI5RxDpUs1XWA+ZVRnDtRXuinJeq9ZRqEp6BAqUCVdsntT5zkGCcdihb/hfM4Qgfnd33T7LDfVQLiCmxgqaCqlTKkNrxnE5R4dwHTO16Xw7FDibgsiXMriIu2zn0peTTnpgRGsTOPKnI8lquKKQrfmYh1P4ViMKbq2gvPL5NPvLtgGmw77RHHapYasrEkJfTEGPvHslsnqJNhCzbHgFzCSHqKBHXnSVKjWCikcE5WQIDAQAB"),
 
   // Other
