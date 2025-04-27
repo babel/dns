@@ -36,7 +36,6 @@ D("babeljs.io", REG_NONE, DnsProvider(DNS_CLOUDFLARE),
 
   // ???
   TXT("@", "google-site-verification=P2hE7IscrrfmQWVSQm1_QSB7rXxuKYDm3S5r2if9qkY"), // Google Workspace?
-  TXT("_github-challenge-babel", "5d7d8ba399"), // GitHub pages?
 );
 
 D("babeljs.com", REG_NONE, DnsProvider(DNS_CLOUDFLARE),
