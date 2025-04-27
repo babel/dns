@@ -8,14 +8,18 @@ DEFAULTS(
   CF_PROXY_DEFAULT_OFF // turn off the orange cloud
 );
 
+var website = [
+  // https://docs.netlify.com/domains/configure-domains/configure-external-dns/#configure-an-apex-domain
+  ALIAS("@", "apex-loadbalancer.netlify.com."),
+  CNAME("www", "babel.netlify.app."),
+  CNAME("next", "babel-next.netlify.app."),
+];
+
 D("babeljs.io", REG_NONE, DnsProvider(DNS_CLOUDFLARE),
   // babeljs.io website
-  A("@", "3.124.100.143"),
-  A("@", "3.125.36.175"),
-  CNAME("www", "babel.netlify.app."),
-  CNAME("new", "babel.netlify.app."),
-  CNAME("next", "babel-next.netlify.app."),
-  CNAME("old", "babel-old.netlify.com."),
+  website,
+  CNAME("new", "babel.netlify.app."), // Redirect to babeljs.io
+  CNAME("old", "babel-old.netlify.com."), // Legacy website
   CNAME("v6", "babel-old.netlify.com."),
 
   // Slack
@@ -38,21 +42,11 @@ D("babeljs.io", REG_NONE, DnsProvider(DNS_CLOUDFLARE),
 );
 
 D("babeljs.com", REG_NONE, DnsProvider(DNS_CLOUDFLARE),
-  A("@", "3.124.100.143"),
-  A("@", "3.125.36.175"),
-  CNAME("www", "babeljs.io."),
+  website,
 );
 
 D("babel.dev", REG_NONE, DnsProvider(DNS_CLOUDFLARE),
-  // babel.dev website
-  A("@", "54.177.145.149"),
-  A("@", "54.67.4.46"),
-  A("www", "54.177.145.149"),
-  A("www", "54.67.4.46"),
-  AAAA("@", "2600:1f1c:446:4900::1f4"),
-  AAAA("@", "2600:1f1c:446:4901::1f4"),
-  AAAA("www", "2600:1f1c:446:4900::1f4"),
-  AAAA("www", "2600:1f1c:446:4901::1f4"),
+  website,
 );
 
 // Bluesky
