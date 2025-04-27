@@ -21,7 +21,7 @@ jobs:
         run: |
           {
             echo "dnscontrol<<DNS_CONTROL_PREVIEW_OUTPUT"
-            docker run --rm -v "$(pwd):/dns" --env CLOUDFLARE_ACCOUNT_ID --env CLOUDFLARE_API_TOKEN ghcr.io/stackexchange/dnscontrol:4.18.0 preview
+            docker run --rm -v "$(pwd):/dns" --env CLOUDFLARE_ACCOUNT_ID --env CLOUDFLARE_API_TOKEN ghcr.io/stackexchange/dnscontrol:4.18.0 preview | sed -e 's/\x1b\[[0-9;]*m//g'
             echo "DNS_CONTROL_PREVIEW_OUTPUT"
           } | tee -a $GITHUB_OUTPUT
         env:
