@@ -33,9 +33,8 @@ D("babeljs.io", REG_NONE, DnsProvider(DNS_CLOUDFLARE),
   CNAME("discuss", "hosted-vh1.discourse.org."),
   CNAME("podcast", "babel-podcast.netlify.com."),
   CNAME("donate", "babeljs.io."), // Will redirect to OpenCollective
-
-  // ???
-  TXT("@", "google-site-verification=P2hE7IscrrfmQWVSQm1_QSB7rXxuKYDm3S5r2if9qkY"), // Google Workspace?
+  // Google Search Console
+  TXT("@", "google-site-verification=dvqOoItOBGcbHYIZLluqVF-iOnWx7gGHQVK_vtzHCYo"),
 );
 
 D("babeljs.com", REG_NONE, DnsProvider(DNS_CLOUDFLARE),
