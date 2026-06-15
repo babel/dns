@@ -12,7 +12,10 @@ var website = [
   // https://docs.netlify.com/domains/configure-domains/configure-external-dns/#configure-an-apex-domain
   ALIAS("@", "apex-loadbalancer.netlify.com."),
   CNAME("www", "babel-v7.netlify.app."),
-  CNAME("next", "babel-next.netlify.app."),
+  CNAME("next", "babel-v8.netlify.app."),
+
+  CNAME("v7", "babel-v7.netlify.app."),
+  CNAME("v8", "babel-v8.netlify.app."),
 ];
 
 D("babeljs.io", REG_NONE, DnsProvider(DNS_CLOUDFLARE),
