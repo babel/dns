@@ -11,14 +11,14 @@ DEFAULTS(
 var website = [
   // https://docs.netlify.com/domains/configure-domains/configure-external-dns/#configure-an-apex-domain
   ALIAS("@", "apex-loadbalancer.netlify.com."),
-  CNAME("www", "babel.netlify.app."),
+  CNAME("www", "babel-v7.netlify.app."),
   CNAME("next", "babel-next.netlify.app."),
 ];
 
 D("babeljs.io", REG_NONE, DnsProvider(DNS_CLOUDFLARE),
   // babeljs.io website
   website,
-  CNAME("new", "babel.netlify.app."), // Redirect to babeljs.io
+  CNAME("new", "babel-v7.netlify.app."), // Redirect to babeljs.io
   CNAME("old", "babel-old.netlify.com."), // Legacy website
   CNAME("v6", "babel-old.netlify.com."),
 
